@@ -10,23 +10,21 @@ truffle init
  ## Crear Nuevo Contrato
  touch SimpleStorage.sol
 
- //////////////////////
- /////////////////////
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
-contract SimpleStorage {
-    uint data;
-    function updateData(uint _data) external {
-        data = _data;
-    }
-    function readData() external view returns (uint) {
-        return data;
-    }
-}
+ 
+       SPDX-License-Identifier: MIT
+       pragma solidity ^0.8.4;
+       contract SimpleStorage {
+          uint data;
+             function updateData(uint _data) external {
+                data = _data;
+                }
+             function readData() external view returns (uint) {
+                  return data;
+                }
+                }
 
 
- //////////////////////
- ////////////////////
+
  
 ## Compilar
  truffle compile
@@ -35,15 +33,15 @@ contract SimpleStorage {
 
  const SimpleSTorage = artifacts.require("SimpleStorage.sol");
 
-contract('SimpleStorage',() => {
-    it("should set the value", async () => {
-        const storage = await SimpleSTorage.new()
-        await storage.updateData(10);
-        const data = await storage.readData();
-        assert(data.toString() === '10');
-        assert(data.toNumber() === 10);
-    });
-});
+      contract('SimpleStorage',() => {
+            it("should set the value", async () => {
+                const storage = await SimpleSTorage.new()
+                 await storage.updateData(10);
+              const data = await storage.readData();
+              assert(data.toString() === '10');
+              assert(data.toNumber() === 10);
+                });
+                 });
 
 ## Testear
  truffle test
@@ -52,10 +50,10 @@ contract('SimpleStorage',() => {
  ## Create file 2_deploy_contracts.js
  ## Copy
 
- const SimpleStorage =artifacts.require('SimpleStorage.sol');
-module.exports = function (deployer){
-  deployer.deploy(SimpleStorage);
-}
+       const SimpleStorage =artifacts.require('SimpleStorage.sol');
+            module.exports = function (deployer){
+            deployer.deploy(SimpleStorage);
+                }
 
 cd ..
 
