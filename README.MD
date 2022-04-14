@@ -79,23 +79,23 @@ truffle migrate --reset --network bscTestnet
 
 ## Interactuar
 
-truffle console --network bscTestnet 
-storage = await SimpleStorage.deployed()
-storage.address
-await storage.updateData(10)
-//data = storage.readData()
-data = await storage.readData()
-data.toString()
+     truffle console --network bscTestnet 
+     storage = await SimpleStorage.deployed()
+     storage.address
+    await storage.updateData(10)
+    //data = storage.readData()
+    data = await storage.readData()
+    data.toString()
 
 ^C = EXIT
 
 ## this is deploy local 
-1- truffle develop 
-2- migrate --reset
-3- storage = await SimpleStorage.deployed()
+     1- truffle develop 
+     2- migrate --reset
+     3- storage = await SimpleStorage.deployed()
 
-truffle develop -> Local
-truffle console -> Public
+     truffle develop -> Local
+     truffle console -> Public
 
 
 
